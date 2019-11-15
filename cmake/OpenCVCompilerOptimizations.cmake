@@ -521,7 +521,7 @@ macro(ocv_compiler_optimization_options)
   endif()
   ocv_check_compiler_flag(CXX "${__flags}" HAVE_CPU_BASELINE_FLAGS)
   if(NOT HAVE_CPU_BASELINE_FLAGS)
-    message(FATAL_ERROR "Compiler doesn't support baseline optimization flags: ${CPU_BASELINE_FLAGS}")
+    message(WARNING "Compiler doesn't support baseline optimization flags: ${CPU_BASELINE_FLAGS}")
   endif()
   add_extra_compiler_option_force("${CPU_BASELINE_FLAGS}")
 
